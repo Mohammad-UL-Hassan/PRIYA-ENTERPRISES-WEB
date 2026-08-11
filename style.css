@@ -1943,7 +1943,7 @@ SMALL MOBILE
 
 .brand-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(1fr, 1fr));
+    grid-template-columns: repeat(5, minmax(2fr, 1fr));
     gap: 24px;
 
     width: 100%;
@@ -2056,4 +2056,403 @@ SMALL MOBILE
     transform: translateY(-3px);
     border-color: #25D366;
     box-shadow: 0 10px 30px rgba(37,211,102,0.15);
+}
+/* =========================================================
+   PRIYA ENTERPRISES — PREMIUM MOBILE ANIMATIONS
+   ========================================================= */
+
+/* ------------------------------
+   SMOOTH SCROLL
+------------------------------ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ------------------------------
+   SCROLL REVEAL
+------------------------------ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ------------------------------
+   HERO ENTRANCE
+------------------------------ */
+
+.hero-eyebrow {
+    animation: heroEyebrow 0.8s ease both;
+}
+
+.hero h1 {
+    animation: heroTitle 1s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero p {
+    animation: heroParagraph 0.9s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-actions {
+    animation: heroActions 0.9s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-bottom {
+    animation: heroBottom 1s 0.7s ease both;
+}
+
+
+@keyframes heroEyebrow {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes heroTitle {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes heroParagraph {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes heroActions {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+@keyframes heroBottom {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ------------------------------
+   HERO RED LIGHT
+------------------------------ */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -160px;
+    top: 20%;
+
+    border-radius: 50%;
+
+    background: rgba(230, 0, 40, 0.14);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+
+    animation: heroGlow 8s ease-in-out infinite alternate;
+}
+
+
+@keyframes heroGlow {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(-80px, 50px) scale(1.2);
+    }
+}
+
+
+/* ------------------------------
+   MATERIAL CARDS
+------------------------------ */
+
+.material-card {
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+}
+
+
+.material-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ------------------------------
+   BRAND CARDS
+------------------------------ */
+
+.brand-card {
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.5s ease,
+        border-color 0.4s ease;
+}
+
+
+.brand-card:hover {
+    transform: translateY(-8px);
+    border-color: #e4002b;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+.brand-card img {
+    transition:
+        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.brand-card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ------------------------------
+   MOBILE TAP EFFECT
+------------------------------ */
+
+@media (max-width: 768px) {
+
+    .brand-card:active {
+        transform: scale(0.96);
+    }
+
+    .brand-card:active img {
+        transform: scale(1.06);
+    }
+
+    .material-card:active {
+        transform: scale(0.97);
+    }
+
+    .primary-btn:active,
+    .text-btn:active,
+    .nav-cta:active {
+        transform: scale(0.96);
+    }
+
+}
+
+
+/* ------------------------------
+   BUTTON ANIMATION
+------------------------------ */
+
+.primary-btn,
+.text-btn,
+.nav-cta {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+.primary-btn i,
+.text-btn i,
+.nav-cta i {
+    transition: transform 0.3s ease;
+}
+
+
+.primary-btn:hover i,
+.text-btn:hover i,
+.nav-cta:hover i {
+    transform: translateX(6px);
+}
+
+
+/* ------------------------------
+   CATEGORY TITLE
+------------------------------ */
+
+.category-title span {
+    transition:
+        width 0.5s ease;
+}
+
+
+.category-title:hover span {
+    width: 45px;
+}
+
+
+/* ------------------------------
+   CONTACT ROW
+------------------------------ */
+
+.contact-row {
+    transition:
+        transform 0.4s ease,
+        padding-left 0.4s ease;
+}
+
+
+.contact-row:hover {
+    transform: translateX(8px);
+}
+
+
+/* ------------------------------
+   WHATSAPP BUTTON
+------------------------------ */
+
+.whatsapp-group {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.whatsapp-group:hover {
+    transform: translateY(-5px);
+}
+
+
+.whatsapp-group i:first-child {
+    animation: whatsappPulse 2.2s infinite;
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ------------------------------
+   SCROLL INDICATOR
+------------------------------ */
+
+.hero-scroll i {
+    animation: scrollArrow 1.6s ease-in-out infinite;
+}
+
+
+@keyframes scrollArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+
+}
+
+
+/* ------------------------------
+   MOBILE PERFORMANCE
+------------------------------ */
+
+@media (max-width: 480px) {
+
+    .hero::after {
+        width: 220px;
+        height: 220px;
+        filter: blur(60px);
+    }
+
+    .brand-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .material-card:hover {
+        transform: none;
+    }
+
+}
+
+
+/* ------------------------------
+   REDUCE MOTION
+------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
 }
