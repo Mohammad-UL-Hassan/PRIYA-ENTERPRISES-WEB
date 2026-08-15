@@ -158,8 +158,8 @@ align-items: center;
 
 .brand-logo img {
 
-width: 65px;
-height: 65px;
+width: 90px;
+height: 90px;
 
 object-fit: contain;
 
@@ -2657,5 +2657,55 @@ html {
     .facebook-group i,
     .instagram-group i {
         font-size: 19px;
+    }
+}
+.footer-bottom  .built-by {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+
+     /* Shiny gold */
+    background: linear-gradient(
+        120deg,
+        #8a5a00 0%,
+        #d4af37 25%,
+        #fff3a3 45%,
+        #ffd700 55%,
+        #b8860b 75%,
+        #fff0a6 100%
+    );
+
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Gold glow */
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.45));
+
+    /* Levitate */
+    animation:
+        goldShine 3s linear infinite,
+        levitate 3s ease-in-out infinite;
+}
+
+@keyframes goldShine {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+@keyframes levitate {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
     }
 }
