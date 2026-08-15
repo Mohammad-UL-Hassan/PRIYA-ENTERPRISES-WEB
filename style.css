@@ -2456,3 +2456,206 @@ html {
     }
 
 }
+
+/* =========================================
+   SOCIAL LINKS CONTAINER
+========================================= */
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 14px;
+
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   FACEBOOK + INSTAGRAM
+========================================= */
+
+.facebook-group,
+.instagram-group {
+    position: relative;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+
+    padding: 11px 16px;
+
+    gap: 9px;
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    overflow: visible;
+
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.facebook-group span,
+.instagram-group span {
+    display: block !important;
+
+    width: auto !important;
+    min-width: max-content;
+
+    white-space: nowrap !important;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   FACEBOOK
+========================================= */
+
+.facebook-group {
+    color: white;
+
+    background: rgba(24, 119, 242, 0.07);
+
+    border: 1px solid rgba(24, 119, 242, 0.25);
+
+    box-shadow:
+        0 8px 25px rgba(24, 119, 242, 0.08);
+}
+
+.facebook-group i {
+    flex: 0 0 auto;
+
+    font-size: 22px;
+
+    color: #1877f2;
+
+    transition: transform 0.3s ease;
+}
+
+.facebook-group span {
+    color: white;
+}
+
+.facebook-group:hover {
+    transform: translateY(-4px);
+
+    background: rgba(24, 119, 242, 0.12);
+
+    border-color: rgba(24, 119, 242, 0.5);
+
+    box-shadow:
+        0 12px 30px rgba(24, 119, 242, 0.22);
+}
+
+.facebook-group:hover i {
+    transform: scale(1.12);
+}
+
+
+/* =========================================
+   INSTAGRAM
+========================================= */
+
+.instagram-group {
+    color: white;
+
+    background: rgba(225, 48, 108, 0.07);
+
+    border: 1px solid rgba(225, 48, 108, 0.25);
+
+    box-shadow:
+        0 8px 25px rgba(225, 48, 108, 0.08);
+}
+
+.instagram-group i {
+    flex: 0 0 auto;
+
+    font-size: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d,
+        #fcb045
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    transition: transform 0.3s ease;
+}
+
+.instagram-group span {
+    color: white;
+}
+
+.instagram-group:hover {
+    transform: translateY(-4px);
+
+    background: rgba(225, 48, 108, 0.12);
+
+    border-color: rgba(225, 48, 108, 0.5);
+
+    box-shadow:
+        0 12px 30px rgba(225, 48, 108, 0.22);
+}
+
+.instagram-group:hover i {
+    transform: scale(1.12) rotate(-5deg);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .facebook-group,
+    .instagram-group {
+        padding: 9px 12px;
+        gap: 7px;
+    }
+
+    .facebook-group span,
+    .instagram-group span {
+        font-size: 12px;
+    }
+
+    .facebook-group i,
+    .instagram-group i {
+        font-size: 19px;
+    }
+}
