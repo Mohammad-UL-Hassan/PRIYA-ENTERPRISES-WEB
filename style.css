@@ -2709,3 +2709,9 @@ html {
         transform: translateY(-7px);
     }
 }
+.brand-card {
+    cursor: pointer;
+}
+.brand-card img {
+     cursor: pointer;
+}
