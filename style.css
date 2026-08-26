@@ -2715,3 +2715,776 @@ html {
 .brand-card img {
      cursor: pointer;
 }
+/* =========================================================
+   PRIYA ENTERPRISES — ENQUIRY FORM UPGRADE
+   Paste this at the VERY BOTTOM of style.css
+   ========================================================= */
+
+
+/* =========================================================
+   ENQUIRY WRAPPER
+   ========================================================= */
+
+.enquiry-wrapper {
+    position: relative;
+    margin-top: 70px;
+    padding: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+
+/* Premium glow */
+
+.enquiry-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: -150px;
+    right: -100px;
+    border-radius: 50%;
+    background: rgba(255, 70, 70, 0.12);
+    filter: blur(70px);
+    pointer-events: none;
+}
+
+
+.enquiry-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    bottom: -130px;
+    left: -80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    filter: blur(70px);
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ENQUIRY HEADER
+   ========================================================= */
+
+.enquiry-header {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+
+.enquiry-header h3 {
+    margin: 10px 0 12px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+
+.enquiry-header h3 em {
+    font-style: normal;
+    opacity: 0.65;
+}
+
+
+.enquiry-header p {
+    margin: 0;
+    max-width: 560px;
+    line-height: 1.7;
+    opacity: 0.72;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.inquiry-form {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+    position: relative;
+    min-width: 0;
+}
+
+
+.form-group.form-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+
+    opacity: 0.78;
+}
+
+
+.form-group label span {
+    font-size: 0.72rem;
+    font-weight: 400;
+    text-transform: none;
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   INPUT / SELECT / TEXTAREA
+   ========================================================= */
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, 0.16);
+
+    color: inherit;
+
+    font-family: inherit;
+
+    font-size: 0.95rem;
+
+    padding: 15px 16px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.inquiry-form input::placeholder,
+.inquiry-form textarea::placeholder {
+    opacity: 0.42;
+    color: inherit;
+}
+
+
+/* Focus */
+
+.inquiry-form input:focus,
+.inquiry-form select:focus,
+.inquiry-form textarea:focus {
+
+    border-color:
+        rgba(210, 190, 190, 0.42);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 0 0 4px rgba(255, 255, 255, 0.055);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.inquiry-form select {
+    cursor: pointer;
+    appearance: auto;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.inquiry-form textarea {
+
+    min-height: 145px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CHARACTER COUNTER
+   ========================================================= */
+
+.character-count {
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 10px;
+
+    padding: 4px 8px;
+
+    border-radius: 7px;
+
+    font-size: 0.7rem;
+
+    background:
+        rgba(0, 0, 0, 0.28);
+
+    opacity: 0.55;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FORM STATUS
+   ========================================================= */
+
+.form-status {
+
+    grid-column: 1 / -1;
+
+    min-height: 24px;
+
+    margin-top: -2px;
+
+    padding: 0;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Empty */
+
+.form-status:empty {
+    display: none;
+}
+
+
+/* Loading */
+
+.form-status.loading {
+
+    display: block;
+
+    padding: 12px 14px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    opacity: 0.8;
+}
+
+
+/* Success */
+
+.form-status.success {
+
+    display: block;
+
+    padding: 12px 14px;
+
+    background:
+        rgba(46, 204, 113, 0.10);
+
+    border:
+        1px solid rgba(46, 204, 113, 0.25);
+
+    color:
+        #72e6a0;
+}
+
+
+/* Error */
+
+.form-status.error {
+
+    display: block;
+
+    padding: 12px 14px;
+
+    background:
+        rgba(231, 76, 60, 0.10);
+
+    border:
+        1px solid rgba(231, 76, 60, 0.25);
+
+    color:
+        #ff8e84;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.enquiry-submit {
+
+    grid-column: 1 / -1;
+
+    position: relative;
+
+    min-height: 55px;
+
+    margin-top: 3px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+.enquiry-submit:hover:not(:disabled) {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* Active */
+
+.enquiry-submit:active:not(:disabled) {
+
+    transform:
+        translateY(0);
+}
+
+
+/* Disabled */
+
+.enquiry-submit:disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.65;
+}
+
+
+/* Loading */
+
+.enquiry-submit[aria-busy="true"] {
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BUTTON LOADING
+   ========================================================= */
+
+.button-loading {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.button-loading::after {
+
+    content: "";
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid currentColor;
+
+    border-right-color:
+        transparent;
+
+    animation:
+        enquirySpinner
+        0.7s linear infinite;
+}
+
+
+@keyframes enquirySpinner {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.inquiry-form input:invalid:not(:placeholder-shown),
+.inquiry-form textarea:invalid:not(:placeholder-shown) {
+
+    /* Only a subtle indication.
+       Browser validation still handles the details. */
+
+    border-color: #d9534f;
+
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+   ========================================================= */
+
+.whatsapp-group {
+
+    margin-top: 22px;
+
+    min-height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 20px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.whatsapp-group > i:first-child {
+
+    font-size: 1.45rem;
+}
+
+
+.whatsapp-group span {
+
+    flex: 1;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+}
+
+
+.whatsapp-group > i:last-child {
+
+    font-size: 0.8rem;
+
+    opacity: 0.6;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.whatsapp-group:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border-color:
+        rgba(255, 255, 255, 0.18);
+}
+
+
+.whatsapp-group:hover > i:last-child {
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   FORM REVEAL ANIMATION
+   ========================================================= */
+
+.enquiry-wrapper.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.enquiry-wrapper.reveal.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.inquiry-form input:focus-visible,
+.inquiry-form select:focus-visible,
+.inquiry-form textarea:focus-visible,
+.enquiry-submit:focus-visible,
+.whatsapp-group:focus-visible {
+
+    outline:
+        2px solid rgba(6, 2, 2, 0.65);
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   MOBILE — TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .enquiry-wrapper {
+
+        margin-top: 50px;
+
+        padding: 28px 22px;
+
+        border-radius: 20px;
+    }
+
+
+    .inquiry-form {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 18px;
+    }
+
+
+    .form-group.form-full {
+
+        grid-column:
+            auto;
+    }
+
+
+    .form-status {
+
+        grid-column:
+            auto;
+    }
+
+
+    .enquiry-submit {
+
+        grid-column:
+            auto;
+
+        width: 100%;
+    }
+
+
+    .enquiry-header {
+
+        margin-bottom: 26px;
+    }
+
+
+    .enquiry-header h3 {
+
+        font-size:
+            clamp(1.9rem, 8vw, 2.6rem);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE — SMALL
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .enquiry-wrapper {
+
+        margin-top: 40px;
+
+        padding: 22px 16px;
+
+        border-radius: 18px;
+    }
+
+
+    .form-group label {
+
+        font-size:
+            0.75rem;
+    }
+
+
+    .inquiry-form input,
+    .inquiry-form select,
+    .inquiry-form textarea {
+
+        padding:
+            14px;
+
+        font-size:
+            0.92rem;
+
+        border-radius:
+            11px;
+    }
+
+
+    .inquiry-form textarea {
+
+        min-height:
+            135px;
+    }
+
+
+    .whatsapp-group {
+
+        min-height:
+            56px;
+
+        padding:
+            0 15px;
+
+        gap:
+            10px;
+    }
+
+
+    .whatsapp-group span {
+
+        font-size:
+            0.82rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .enquiry-wrapper,
+    .enquiry-submit,
+    .whatsapp-group,
+    .inquiry-form input,
+    .inquiry-form select,
+    .inquiry-form textarea {
+
+        transition:
+            none !important;
+    }
+
+
+    .button-loading::after {
+
+        animation:
+            none !important;
+    }
+
+}
