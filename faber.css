@@ -1,0 +1,2074 @@
+
+/* =========================================================
+   FABER PAGE
+   PRIYA ENTERPRISES
+   Premium Kitchen & Home Appliances Catalogue
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f7f7;
+    color: #111111;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #c8102e;
+    --primary-dark: #98001d;
+    --primary-light: #fff1f3;
+
+    --black: #0c0c0c;
+    --dark: #151515;
+    --dark-soft: #202020;
+
+    --white: #ffffff;
+
+    --light: #f7f7f7;
+    --gray: #707070;
+    --gray-light: #999999;
+
+    --border: rgba(0, 0, 0, 0.08);
+
+    --shadow-sm:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    --shadow-md:
+        0 18px 50px rgba(0, 0, 0, 0.10);
+
+    --shadow-lg:
+        0 30px 80px rgba(0, 0, 0, 0.16);
+
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 520px;
+    height: 520px;
+
+    top: -220px;
+    right: -200px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(200, 16, 46, 0.08),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    bottom: -250px;
+    left: -220px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(200, 16, 46, 0.06),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    width: 100%;
+
+    padding:
+        18px
+        clamp(20px, 6vw, 90px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid
+        rgba(0, 0, 0, 0.07);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   PRIYA ENTERPRISES LOGO
+========================================================= */
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: var(--black);
+
+    transition:
+        0.3s ease;
+}
+
+.logo span {
+
+    color:
+        var(--primary);
+}
+
+.logo:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        10px 17px;
+
+    border:
+        1px solid
+        rgba(200, 16, 46, 0.18);
+
+    border-radius:
+        999px;
+
+    color:
+        var(--primary);
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    background:
+        rgba(200, 16, 46, 0.04);
+
+    transition:
+        0.3s ease;
+}
+
+.back-btn:hover {
+
+    color:
+        var(--white);
+
+    background:
+        var(--primary);
+
+    transform:
+        translateX(-4px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(200, 16, 46, 0.25);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height:
+        520px;
+
+    padding:
+        85px
+        clamp(20px, 7vw, 100px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 360px)
+        1fr;
+
+    align-items: center;
+
+    gap:
+        clamp(40px, 7vw, 100px);
+
+    color:
+        var(--white);
+
+    overflow:
+        hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 12% 50%,
+            rgba(200, 16, 46, 0.20),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 255, 255, 0.04),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #090909,
+            #181818 55%,
+            #101010
+        );
+}
+
+
+/* =========================================================
+   HERO GLOW
+========================================================= */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 560px;
+    height: 560px;
+
+    right: -220px;
+    top: -220px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(200, 16, 46, 0.26),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   HERO DECORATIVE LINE
+========================================================= */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: 12%;
+    bottom: -190px;
+
+    border-radius:
+        50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.05);
+
+    box-shadow:
+        0 0 0 35px rgba(255,255,255,0.015),
+        0 0 0 70px rgba(255,255,255,0.01);
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   FABER LOGO CARD
+========================================================= */
+
+.brand-logo-box {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio:
+        1.25;
+
+    padding:
+        35px;
+
+    display: flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.38);
+
+    overflow:
+        hidden;
+
+    animation:
+        logoFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   LOGO CARD GLOW
+========================================================= */
+
+.brand-logo-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    top: -110px;
+    right: -80px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(200, 16, 46, 0.12),
+            transparent 70%
+        );
+}
+
+
+.brand-logo-box::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    bottom: -80px;
+    left: -60px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(0, 0, 0, 0.035);
+}
+
+
+/* =========================================================
+   LOGO IMAGE
+========================================================= */
+
+.brand-logo-box img {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    max-height:
+        190px;
+
+    object-fit:
+        contain;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.brand-logo-box:hover img {
+
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================================
+   LOGO FLOAT
+========================================================= */
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-9px);
+    }
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        760px;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.small-title {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        18px;
+
+    color:
+        #e52a47;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        3px;
+}
+
+
+.small-title::before {
+
+    content:
+        "";
+
+    width:
+        28px;
+
+    height:
+        2px;
+
+    background:
+        var(--primary);
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero h1 {
+
+    font-size:
+        clamp(48px, 7vw, 84px);
+
+    line-height:
+        0.98;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -3px;
+
+    margin-bottom:
+        25px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero p {
+
+    max-width:
+        670px;
+
+    color:
+        rgba(255,255,255,0.72);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.9;
+}
+
+
+/* =========================================================
+   HERO ACCENT
+========================================================= */
+
+.hero-content::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        75px;
+
+    height:
+        3px;
+
+    margin-top:
+        28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   PRODUCTS SECTION
+========================================================= */
+
+.products-section {
+
+    position:
+        relative;
+
+    padding:
+        100px
+        clamp(20px, 6vw, 90px);
+
+    background:
+        #f7f7f7;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+    max-width:
+        850px;
+
+    margin:
+        0 auto 55px;
+
+    text-align:
+        center;
+}
+
+
+.section-heading > span {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--primary);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        3px;
+}
+
+
+.section-heading h2 {
+
+    font-size:
+        clamp(32px, 5vw, 48px);
+
+    line-height:
+        1.15;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1px;
+}
+
+
+.section-heading p {
+
+    margin-top:
+        14px;
+
+    color:
+        var(--gray);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.product-grid {
+
+    width:
+        100%;
+
+    max-width:
+        1280px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        28px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+
+    position:
+        relative;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    border:
+        1px solid
+        rgba(0,0,0,0.07);
+
+    border-radius:
+        var(--radius-md);
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.product-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(200,16,46,0.20);
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+
+/* =========================================================
+   CARD TOP ACCENT
+========================================================= */
+
+.product-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    width:
+        100%;
+
+    height:
+        3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            #ed4962,
+            transparent
+        );
+
+    opacity:
+        0;
+
+    transition:
+        opacity 0.3s ease;
+
+    z-index:
+        5;
+}
+
+
+.product-card:hover::before {
+
+    opacity:
+        1;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image {
+
+    position:
+        relative;
+
+    height:
+        270px;
+
+    padding:
+        30px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f2f2f2
+        );
+
+    border-bottom:
+        1px solid
+        rgba(0,0,0,0.06);
+
+    overflow:
+        hidden;
+}
+
+
+/* =========================================================
+   IMAGE BACKGROUND GLOW
+========================================================= */
+
+.product-image::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        220px;
+
+    height:
+        220px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(200,16,46,0.08),
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.product-image img {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+.product-card:hover
+.product-image img {
+
+    transform:
+        scale(1.06);
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.product-info {
+
+    padding:
+        25px;
+}
+
+
+.product-info h3 {
+
+    font-size:
+        18px;
+
+    line-height:
+        1.35;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        10px;
+}
+
+
+.product-info p {
+
+    color:
+        var(--gray);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.75;
+
+    min-height:
+        160px;
+}
+
+
+.product-info p span {
+
+    display:
+        inline-block;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.product-card:hover
+.product-info p span {
+
+    color:
+        #5f5f5f;
+}
+
+
+/* =========================================================
+   PRICE BOX
+========================================================= */
+
+.price-box {
+
+    margin-top:
+        20px;
+
+    padding:
+        15px 16px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    border:
+        1px solid
+        rgba(200,16,46,0.10);
+
+    border-radius:
+        var(--radius-sm);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5f6,
+            #ffffff
+        );
+}
+
+
+.price-box span {
+
+    flex:
+        0 0 auto;
+
+    color:
+        #777;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.5px;
+}
+
+
+.price-box strong {
+
+    color:
+        var(--primary);
+
+    font-size:
+        14px;
+
+    text-align:
+        right;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.45;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.whatsapp-btn {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    margin-top:
+        15px;
+
+    padding:
+        14px 18px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--primary);
+
+    color:
+        var(--white);
+
+    border-radius:
+        var(--radius-sm);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    transition:
+        0.3s ease;
+}
+
+
+.whatsapp-btn::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -120%;
+
+    width:
+        70%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.22),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.6s ease;
+}
+
+
+.whatsapp-btn:hover::before {
+
+    left:
+        140%;
+}
+
+
+.whatsapp-btn:hover {
+
+    background:
+        var(--primary-dark);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(200,16,46,0.25);
+}
+
+
+/* =========================================================
+   FABER HIGHLIGHTS
+========================================================= */
+
+.faber-highlights {
+
+    width:
+        100%;
+
+    max-width:
+        1280px;
+
+    margin:
+        100px auto 0;
+
+    padding:
+        70px 0 0;
+
+    border-top:
+        1px solid
+        rgba(0,0,0,0.07);
+}
+
+
+.highlight-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:
+        20px;
+
+    max-width:
+        1150px;
+
+    margin:
+        auto;
+}
+
+
+.highlight-card {
+
+    position:
+        relative;
+
+    padding:
+        28px 24px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border:
+        1px solid
+        rgba(0,0,0,0.07);
+
+    border-radius:
+        var(--radius-md);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.highlight-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    width:
+        100%;
+
+    height:
+        3px;
+
+    background:
+        var(--primary);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.highlight-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow-md);
+
+    border-color:
+        rgba(200,16,46,0.16);
+}
+
+
+.highlight-card:hover::before {
+
+    transform:
+        scaleX(1);
+}
+
+
+.highlight-card h3 {
+
+    font-size:
+        16px;
+
+    margin-bottom:
+        10px;
+
+    font-weight:
+        700;
+}
+
+
+.highlight-card p {
+
+    color:
+        var(--gray);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   PRICE NOTICE
+========================================================= */
+
+.price-notice {
+
+    width:
+        100%;
+
+    max-width:
+        900px;
+
+    margin:
+        55px auto 0;
+
+    padding:
+        20px 25px;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    border:
+        1px solid
+        rgba(0,0,0,0.07);
+
+    border-left:
+        4px solid
+        var(--primary);
+
+    border-radius:
+        var(--radius-sm);
+
+    color:
+        #666;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.price-notice strong {
+
+    color:
+        var(--black);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    position:
+        relative;
+
+    padding:
+        38px
+        clamp(20px, 6vw, 90px);
+
+    background:
+        #111111;
+
+    color:
+        #888888;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+
+    flex-wrap:
+        wrap;
+
+    font-size:
+        12px;
+}
+
+
+footer::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--primary),
+            transparent
+        );
+}
+
+
+footer strong {
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   CARD REVEAL ANIMATION
+========================================================= */
+
+.product-card {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(25px);
+
+    animation:
+        cardReveal 0.7s ease forwards;
+}
+
+
+.product-card:nth-child(1) {
+    animation-delay: 0.08s;
+}
+
+.product-card:nth-child(2) {
+    animation-delay: 0.16s;
+}
+
+.product-card:nth-child(3) {
+    animation-delay: 0.24s;
+}
+
+.product-card:nth-child(4) {
+    animation-delay: 0.32s;
+}
+
+.product-card:nth-child(5) {
+    animation-delay: 0.40s;
+}
+
+.product-card:nth-child(6) {
+    animation-delay: 0.48s;
+}
+
+.product-card:nth-child(7) {
+    animation-delay: 0.56s;
+}
+
+
+@keyframes cardReveal {
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   HIGHLIGHT REVEAL
+========================================================= */
+
+.highlight-card {
+
+    animation:
+        highlightReveal 0.7s ease forwards;
+}
+
+
+@keyframes highlightReveal {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero {
+
+        grid-template-columns:
+            270px 1fr;
+
+        gap:
+            50px;
+
+        padding:
+            75px 6%;
+    }
+
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width:
+            950px;
+    }
+
+
+    .highlight-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width:
+            800px;
+    }
+}
+
+
+/* =========================================================
+   TABLET SMALL
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+
+        grid-template-columns:
+            230px 1fr;
+
+        gap:
+            35px;
+
+        min-height:
+            460px;
+
+        padding:
+            65px 5%;
+    }
+
+
+    .brand-logo-box {
+
+        padding:
+            25px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(44px, 8vw, 68px);
+    }
+
+
+    .hero p {
+
+        font-size:
+            14px;
+    }
+
+
+    .products-section {
+
+        padding:
+            80px 5%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        padding:
+            15px 5%;
+    }
+
+
+    .logo {
+
+        font-size:
+            17px;
+    }
+
+
+    .back-btn {
+
+        padding:
+            8px 12px;
+
+        font-size:
+            11px;
+    }
+
+
+    .hero {
+
+        grid-template-columns:
+            1fr;
+
+        min-height:
+            0;
+
+        text-align:
+            center;
+
+        padding:
+            65px 5% 75px;
+    }
+
+
+    .brand-logo-box {
+
+        width:
+            min(285px, 82vw);
+
+        margin:
+            auto;
+
+        aspect-ratio:
+            1.25;
+    }
+
+
+    .hero-content {
+
+        margin:
+            auto;
+    }
+
+
+    .small-title {
+
+        justify-content:
+            center;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(45px, 15vw, 68px);
+
+        letter-spacing:
+            -2px;
+    }
+
+
+    .hero p {
+
+        margin:
+            auto;
+
+        max-width:
+            560px;
+    }
+
+
+    .hero-content::after {
+
+        margin:
+            28px auto 0;
+    }
+
+
+    .products-section {
+
+        padding:
+            70px 5%;
+    }
+
+
+    .section-heading {
+
+        margin-bottom:
+            40px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            clamp(30px, 9vw, 42px);
+    }
+
+
+    .product-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            22px;
+
+        max-width:
+            520px;
+    }
+
+
+    .product-image {
+
+        height:
+            250px;
+    }
+
+
+    .product-info {
+
+        padding:
+            22px;
+    }
+
+
+    .product-info p {
+
+        min-height:
+            0;
+    }
+
+
+    .price-box {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            5px;
+    }
+
+
+    .price-box strong {
+
+        text-align:
+            left;
+
+        font-size:
+            15px;
+    }
+
+
+    .highlight-grid {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            520px;
+
+        gap:
+            16px;
+    }
+
+
+    .faber-highlights {
+
+        margin-top:
+            75px;
+
+        padding-top:
+            55px;
+    }
+
+
+    .price-notice {
+
+        margin-top:
+            40px;
+
+        padding:
+            18px 20px;
+
+        font-size:
+            12px;
+    }
+
+
+    footer {
+
+        justify-content:
+            center;
+
+        text-align:
+            center;
+
+        padding:
+            32px 5%;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .navbar {
+
+        align-items:
+            center;
+
+        gap:
+            8px;
+    }
+
+
+    .logo {
+
+        font-size:
+            15px;
+
+        letter-spacing:
+            0.5px;
+    }
+
+
+    .back-btn {
+
+        padding:
+            7px 10px;
+
+        font-size:
+            10px;
+    }
+
+
+    .brand-logo-box {
+
+        padding:
+            22px;
+    }
+
+
+    .hero {
+
+        padding:
+            55px 5% 65px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            44px;
+    }
+
+
+    .hero p {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.8;
+    }
+
+
+    .product-image {
+
+        height:
+            225px;
+
+        padding:
+            22px;
+    }
+
+
+    .product-info {
+
+        padding:
+            20px;
+    }
+
+
+    .product-info h3 {
+
+        font-size:
+            17px;
+    }
+
+
+    .product-info p {
+
+        font-size:
+            12px;
+    }
+
+
+    .whatsapp-btn {
+
+        padding:
+            13px 15px;
+
+        font-size:
+            12px;
+    }
+
+
+    .highlight-card {
+
+        padding:
+            23px 20px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior:
+            auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}
+
+
+/* =========================================================
+   IMAGE FALLBACK
+========================================================= */
+
+.product-image img[src=""],
+.brand-logo-box img[src=""] {
+
+    display:
+        none;
+}
+
