@@ -9,7 +9,7 @@
    ========================================================= */
 
 const API_BASE_URL =
-    "http://127.0.0.1:5000";
+    "https://priya-enterprises-web.onrender.com";
 
 
 /* =========================================================
@@ -925,7 +925,7 @@ function initializeInquiryForm() {
                     showFormStatus(
 
                         "Unable to connect to the Priya Enterprises server. " +
-                        "Please check that the Flask backend is running.",
+                        "Please go into our whatsapp group.",
 
                         "error"
 
