@@ -3488,3 +3488,161 @@ html {
     }
 
 }
+/* =========================================================
+   PRIYA ENTERPRISES — PREMIUM MATERIAL SELECT
+   Paste at the VERY BOTTOM of style.css
+   ========================================================= */
+
+#material {
+    width: 100%;
+    height: 58px;
+    padding: 0 52px 0 18px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: rgba(255, 255, 255, 0.06);
+    background-image:
+        linear-gradient(45deg, transparent 50%, currentColor 50%),
+        linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position:
+        calc(100% - 22px) 25px,
+        calc(100% - 16px) 25px;
+    background-size:
+        6px 6px,
+        6px 6px;
+    background-repeat: no-repeat;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+
+    outline: none;
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease;
+}
+
+/* Placeholder */
+#material:invalid {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* Options */
+#material option {
+    background: #171717;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px;
+}
+
+/* Hover */
+#material:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Focus */
+#material:focus {
+    border-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.09);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.07),
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    transform: translateY(-1px);
+}
+
+/* When opened / active */
+#material:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   MATERIAL FIELD LABEL
+   ========================================================= */
+
+label[for="material"] {
+    display: block;
+    margin-bottom: 9px;
+
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+#material {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   LIGHT BACKGROUND FALLBACK
+   If your form uses a light theme
+   ========================================================= */
+
+@media (prefers-color-scheme: light) {
+    #material {
+        background-color: rgba(0, 0, 0, 0.035);
+        border-color: rgba(0, 0, 0, 0.12);
+        color: #222222;
+    }
+
+    #material option {
+        background: #ffffff;
+        color: #222222;
+    }
+
+    #material:hover {
+        background-color: rgba(0, 0, 0, 0.055);
+        border-color: rgba(0, 0, 0, 0.22);
+    }
+
+    #material:focus {
+        border-color: rgba(0, 0, 0, 0.35);
+        box-shadow:
+            0 0 0 3px rgba(0, 0, 0, 0.06),
+            0 8px 25px rgba(0, 0, 0, 0.10);
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+    #material {
+        height: 54px;
+        padding-left: 16px;
+        padding-right: 48px;
+        font-size: 14px;
+
+        background-position:
+            calc(100% - 20px) 23px,
+            calc(100% - 14px) 23px;
+    }
+
+    #material option {
+        font-size: 14px;
+    }
+
+    label[for="material"] {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+}
